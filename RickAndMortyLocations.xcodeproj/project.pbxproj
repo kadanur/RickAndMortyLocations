@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA297E42282AE97200228981 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA297E41282AE97200228981 /* DetailViewController.swift */; };
+		BA297E45282AEF0000228981 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA297E44282AEF0000228981 /* CharacterCell.swift */; };
+		BA297E47282B093200228981 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA297E46282B093200228981 /* PresentationController.swift */; };
 		BA8455932829A18D00584DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8455922829A18D00584DF2 /* AppDelegate.swift */; };
 		BA8455952829A18D00584DF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8455942829A18D00584DF2 /* SceneDelegate.swift */; };
 		BA84559C2829A18E00584DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA84559B2829A18E00584DF2 /* Assets.xcassets */; };
@@ -15,6 +18,8 @@
 		BA8455A92829A46C00584DF2 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8455A82829A46C00584DF2 /* LocationCell.swift */; };
 		BA8455AC2829A5B400584DF2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BA8455AB2829A5B400584DF2 /* SnapKit */; };
 		BA8455AE2829B23900584DF2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8455AD2829B23900584DF2 /* UIColor+Extension.swift */; };
+		BAA80938282B2656005433A3 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = BAA80937282B2656005433A3 /* schema.json */; };
+		BAA8093A282B27AF005433A3 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = BAA80939282B27AF005433A3 /* Queries.graphql */; };
 		BAA90DC72829E2050056E1DA /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAA90DC02829E1C00056E1DA /* Inter-Black.ttf */; };
 		BAA90DC82829E2050056E1DA /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAA90DC12829E1C00056E1DA /* Inter-Bold.ttf */; };
 		BAA90DC92829E2050056E1DA /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAA90DBE2829E1C00056E1DA /* Inter-ExtraBold.ttf */; };
@@ -24,9 +29,13 @@
 		BAA90DCD2829E2050056E1DA /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAA90DC32829E1C00056E1DA /* Inter-Regular.ttf */; };
 		BAA90DCE2829E2050056E1DA /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAA90DC52829E1C00056E1DA /* Inter-SemiBold.ttf */; };
 		BAA90DCF2829E2050056E1DA /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAA90DC42829E1C00056E1DA /* Inter-Thin.ttf */; };
+		BAA90DD42829E66F0056E1DA /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BAA90DD32829E66F0056E1DA /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA297E41282AE97200228981 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BA297E44282AEF0000228981 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		BA297E46282B093200228981 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		BA84558F2829A18D00584DF2 /* RickAndMortyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8455922829A18D00584DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8455942829A18D00584DF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +45,8 @@
 		BA8455A62829A27B00584DF2 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		BA8455A82829A46C00584DF2 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		BA8455AD2829B23900584DF2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		BAA80937282B2656005433A3 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		BAA80939282B27AF005433A3 /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		BAA90DBE2829E1C00056E1DA /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BAA90DBF2829E1C00056E1DA /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		BAA90DC02829E1C00056E1DA /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
@@ -53,12 +64,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA8455AC2829A5B400584DF2 /* SnapKit in Frameworks */,
+				BAA90DD42829E66F0056E1DA /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA297E3C282AE85300228981 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA297E3D282AE90D00228981 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BA297E3E282AE91F00228981 /* Locations */,
+				BA297E40282AE96100228981 /* Detail */,
+				BA297E46282B093200228981 /* PresentationController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BA297E3E282AE91F00228981 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				BA297E3F282AE92B00228981 /* Cell */,
+				BA8455A62829A27B00584DF2 /* LocationsViewController.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		BA297E3F282AE92B00228981 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BA8455A82829A46C00584DF2 /* LocationCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BA297E40282AE96100228981 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BA297E43282AEEF600228981 /* Cell */,
+				BA297E41282AE97200228981 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		BA297E43282AEEF600228981 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BA297E44282AEF0000228981 /* CharacterCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		BA8455862829A18D00584DF2 = {
 			isa = PBXGroup;
 			children = (
@@ -78,13 +141,16 @@
 		BA8455912829A18D00584DF2 /* RickAndMortyLocations */ = {
 			isa = PBXGroup;
 			children = (
+				BAA80939282B27AF005433A3 /* Queries.graphql */,
+				BAA80937282B2656005433A3 /* schema.json */,
+				BAA80936282B264C005433A3 /* Network */,
 				BAA90DD12829E2350056E1DA /* App */,
 				BAA90DD02829E2290056E1DA /* Extensions */,
 				BA8455AF2829B3E600584DF2 /* Fonts */,
+				BA297E3C282AE85300228981 /* Model */,
+				BA297E3D282AE90D00228981 /* UI */,
 				BA84559B2829A18E00584DF2 /* Assets.xcassets */,
 				BA84559D2829A18E00584DF2 /* LaunchScreen.storyboard */,
-				BA8455A62829A27B00584DF2 /* LocationsViewController.swift */,
-				BA8455A82829A46C00584DF2 /* LocationCell.swift */,
 			);
 			path = RickAndMortyLocations;
 			sourceTree = "<group>";
@@ -103,6 +169,13 @@
 				BAA90DC42829E1C00056E1DA /* Inter-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BAA80936282B264C005433A3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		BAA90DD02829E2290056E1DA /* Extensions */ = {
@@ -133,6 +206,7 @@
 				BA84558B2829A18D00584DF2 /* Sources */,
 				BA84558C2829A18D00584DF2 /* Frameworks */,
 				BA84558D2829A18D00584DF2 /* Resources */,
+				BA297E48282B22CE00228981 /* Apollo */,
 			);
 			buildRules = (
 			);
@@ -141,6 +215,7 @@
 			name = RickAndMortyLocations;
 			packageProductDependencies = (
 				BA8455AB2829A5B400584DF2 /* SnapKit */,
+				BAA90DD32829E66F0056E1DA /* Apollo */,
 			);
 			productName = RickAndMortyLocations;
 			productReference = BA84558F2829A18D00584DF2 /* RickAndMortyLocations.app */;
@@ -172,6 +247,7 @@
 			mainGroup = BA8455862829A18D00584DF2;
 			packageReferences = (
 				BA8455AA2829A5B400584DF2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BAA90DD22829E66F0056E1DA /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = BA8455902829A18D00584DF2 /* Products */;
 			projectDirPath = "";
@@ -191,10 +267,12 @@
 				BAA90DC82829E2050056E1DA /* Inter-Bold.ttf in Resources */,
 				BAA90DC92829E2050056E1DA /* Inter-ExtraBold.ttf in Resources */,
 				BAA90DCA2829E2050056E1DA /* Inter-ExtraLight.ttf in Resources */,
+				BAA80938282B2656005433A3 /* schema.json in Resources */,
 				BAA90DCB2829E2050056E1DA /* Inter-Light.ttf in Resources */,
 				BAA90DCC2829E2050056E1DA /* Inter-Medium.ttf in Resources */,
 				BAA90DCD2829E2050056E1DA /* Inter-Regular.ttf in Resources */,
 				BAA90DCE2829E2050056E1DA /* Inter-SemiBold.ttf in Resources */,
+				BAA8093A282B27AF005433A3 /* Queries.graphql in Resources */,
 				BAA90DCF2829E2050056E1DA /* Inter-Thin.ttf in Resources */,
 				BA84559F2829A18E00584DF2 /* LaunchScreen.storyboard in Resources */,
 				BA84559C2829A18E00584DF2 /* Assets.xcassets in Resources */,
@@ -202,6 +280,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA297E48282B22CE00228981 /* Apollo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Apollo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA84558B2829A18D00584DF2 /* Sources */ = {
@@ -211,8 +310,11 @@
 				BA8455932829A18D00584DF2 /* AppDelegate.swift in Sources */,
 				BA8455952829A18D00584DF2 /* SceneDelegate.swift in Sources */,
 				BA8455A92829A46C00584DF2 /* LocationCell.swift in Sources */,
+				BA297E45282AEF0000228981 /* CharacterCell.swift in Sources */,
+				BA297E42282AE97200228981 /* DetailViewController.swift in Sources */,
 				BA8455A72829A27B00584DF2 /* LocationsViewController.swift in Sources */,
 				BA8455AE2829B23900584DF2 /* UIColor+Extension.swift in Sources */,
+				BA297E47282B093200228981 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +532,14 @@
 				kind = branch;
 			};
 		};
+		BAA90DD22829E66F0056E1DA /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -437,6 +547,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BA8455AA2829A5B400584DF2 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		BAA90DD32829E66F0056E1DA /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAA90DD22829E66F0056E1DA /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

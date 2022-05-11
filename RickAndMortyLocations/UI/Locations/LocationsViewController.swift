@@ -21,6 +21,10 @@ class LocationsViewController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("Testing viewWillAppear")
+    }
+    
     func setup() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,7 +36,7 @@ class LocationsViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(tableView)
         
-        titleLabel.text = "Location"
+        titleLabel.text = "Locations"
         titleLabel.font = UIFont.init(name: "OpenSans-Bold", size: 15)
         titleLabel.font = UIFont(name: "Inter-Bold", size: 24)
         titleLabel.snp.makeConstraints { make in
@@ -62,7 +66,20 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.modalPresentationStyle = .custom
+        detailVC.transitioningDelegate = self
+        present(detailVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 92
+    }
+}
+
+extension LocationsViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
     }
 }

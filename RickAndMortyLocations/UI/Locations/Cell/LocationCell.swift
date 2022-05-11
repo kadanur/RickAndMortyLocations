@@ -89,6 +89,5 @@ class LocationCell: UITableViewCell {
             make.bottom.equalToSuperview().offset(-4)
         }
     }
-    
 }
 
