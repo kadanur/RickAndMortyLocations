@@ -78,6 +78,7 @@ class LocationCell: UITableViewCell {
         
         locationTypeContainer.addSubview(locationTypeLabel)
         locationTypeLabel.font = UIFont(name: "Inter-Bold", size: 12)
+        locationTypeLabel.layer.opacity = 0.7
         locationTypeLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(4)
             make.left.equalToSuperview().offset(8)

@@ -13,11 +13,15 @@ import Kingfisher
 class DetailViewController: UIViewController {
     var viewModel = DetailsViewModel()
     let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
+    let indicatorView = UIView()
     let typeContainer = UIView()
     let typeLabel = UILabel()
     let titleLabel = UILabel()
     let dimensionLabel = UILabel()
     let charactersLabel = UILabel()
+    
+    var hasSetPointOrigin = false
+    var pointOrigin: CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,13 @@ class DetailViewController: UIViewController {
         view.backgroundColor = .white
         setup()
         setupUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if !hasSetPointOrigin {
+            hasSetPointOrigin = true
+            pointOrigin = self.view.frame.origin
+        }
     }
     
     func getData() {
@@ -48,9 +59,21 @@ class DetailViewController: UIViewController {
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         collectionView.setCollectionViewLayout(layout, animated: true)
         getData()
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
+        view.addGestureRecognizer(panGesture)
     }
     
     func setupUI() {
+        view.addSubview(indicatorView)
+        indicatorView.backgroundColor = UIColor(rgb: 0xEBEBEB)
+        indicatorView.layer.cornerRadius = 2
+        indicatorView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(8)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(4)
+            make.width.equalTo(32)
+        }
+        
         view.addSubview(typeContainer)
         typeContainer.backgroundColor = UIColor(rgb: 0xB2FFBF)
         typeContainer.layer.cornerRadius = 4
@@ -62,6 +85,7 @@ class DetailViewController: UIViewController {
         typeContainer.addSubview(typeLabel)
         typeLabel.text = "Planet"
         typeLabel.font = UIFont(name: "Inter-Bold", size: 12)
+        typeLabel.layer.opacity = 0.7
         typeLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(4)
             make.left.equalToSuperview().offset(8)
@@ -103,6 +127,28 @@ class DetailViewController: UIViewController {
             make.left.equalTo(24)
             make.right.equalToSuperview()
             make.height.equalTo(161)
+        }
+    }
+    
+    @objc func panGestureRecognizerAction(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+        
+        // Not allowing the user to drag the view upward
+        guard translation.y >= 0 else { return }
+        
+        // setting x as 0 because we don't want users to move the frame side ways!! Only want straight up or down
+        view.frame.origin = CGPoint(x: 0, y: self.pointOrigin!.y + translation.y)
+        
+        if sender.state == .ended {
+            let dragVelocity = sender.velocity(in: view)
+            if dragVelocity.y >= 1300 {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                // Set back to original position of the view controller
+                UIView.animate(withDuration: 0.3) {
+                    self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 400)
+                }
+            }
         }
     }
 }
