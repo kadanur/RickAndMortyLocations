@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class CharacterCell: UICollectionViewCell {
-    let characterImage = UIImageView()
+    let characterImage = CustomImageView()
     let characterNameLabel = UILabel()
     
     enum CharacterCellIdentifier: String {
@@ -24,7 +24,6 @@ class CharacterCell: UICollectionViewCell {
       
         characterImage.backgroundColor = .gray
         characterImage.image = UIImage(named: "characterImage")
-        characterImage.layer.cornerRadius = 8
         characterImage.snp.makeConstraints { make in
             make.top.left.right.equalToSuperview()
             make.height.width.equalTo(138)
@@ -34,7 +33,7 @@ class CharacterCell: UICollectionViewCell {
         characterNameLabel.font = UIFont(name: "Inter-Bold", size: 12)
         characterNameLabel.snp.makeConstraints { make in
             make.top.equalTo(characterImage.snp.bottom).offset(8)
-            make.left.equalToSuperview()
+            make.left.right.equalToSuperview()
         }
     }
 

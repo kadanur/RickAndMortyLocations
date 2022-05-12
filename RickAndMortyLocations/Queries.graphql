@@ -9,9 +9,19 @@ query GetLocations($page: Int) {
     }
 }
 
+query GetLocation($id: ID!) {
+    location(id: $id) {
+        ...OneLocationDetail
+    }
+}
+
 fragment LocationDetail on Location {
     id, name, type, dimension,
+}
+
+fragment OneLocationDetail on Location {
+    id, name, type, dimension,
     residents {
-        id, name, image
+        name, image
     }
 }

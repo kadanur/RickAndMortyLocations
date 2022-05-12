@@ -32,20 +32,15 @@ class LocationCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
-        
-    }
-    
     func setupUI() {
-        
         addSubview(cellContainer)
         cellContainer.layer.cornerRadius = 8
         cellContainer.backgroundColor = UIColor(rgb: 0xF5F5F5)
         cellContainer.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.bottom.equalToSuperview().offset(-10)
-            make.left.equalToSuperview().offset(24)
-            make.right.equalToSuperview().offset(-24)
+            make.left.equalToSuperview()//.offset(24)
+            make.right.equalToSuperview()//.offset(-24)
         }
         
         cellContainer.addSubview(locationIcon)
@@ -56,11 +51,20 @@ class LocationCell: UITableViewCell {
             make.width.height.equalTo(16)
         }
         
+        cellContainer.addSubview(locationTypeContainer)
+        locationTypeContainer.backgroundColor = UIColor(rgb: 0xB2FFBF)
+        locationTypeContainer.layer.cornerRadius = 4
+        locationTypeContainer.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+        }
+        
         cellContainer.addSubview(locationLabel)
         locationLabel.font = UIFont(name: "Inter-Bold", size: 16)
         locationLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(18)
             make.left.equalTo(locationIcon.snp.right).offset(8)
+            make.right.equalTo(locationTypeContainer.snp.left).offset(-8)
         }
         
         cellContainer.addSubview(locationDescLabel)
@@ -70,14 +74,6 @@ class LocationCell: UITableViewCell {
             make.bottom.equalTo(-16)
             make.left.equalTo(16)
             make.right.equalTo(-16)
-        }
-        
-        cellContainer.addSubview(locationTypeContainer)
-        locationTypeContainer.backgroundColor = UIColor(rgb: 0xB2FFBF)
-        locationTypeContainer.layer.cornerRadius = 4
-        locationTypeContainer.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
         }
         
         locationTypeContainer.addSubview(locationTypeLabel)
